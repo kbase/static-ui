@@ -101,8 +101,8 @@
       "^d3-(.*)$": "d3-$1/dist/d3-$1"
     }
   },
-  "name": "ui-refresh-test",
-  "private": true,
+  "name": "@jsfillman/ui",
+  "private": false,
   "proxy": "https://ci-europa.kbase.us",
   "remarkConfig": {
     "plugins": {
