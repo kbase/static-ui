@@ -31,25 +31,25 @@ jobs:
           PUBLIC_URL: '/'
           REACT_APP_AUTH_SERIVCE_URL: 'https://ci-europa.kbase.us/services/auth'
         run: npm install && npm run build
-      - name: build-develop-open:
+      - name: build-develop-open
         if: github.base_ref == 'develop' && github.event.pull_request.merged == false
         uses: kbase/.github/.github/workflows/reusable_build.yml@main
         secrets: inherit
-      - name: build-develop-merge:
+      - name: build-develop-merge
         if: github.base_ref == 'develop' && github.event.pull_request.merged == true
         uses: kbase/.github/.github/workflows/reusable_build-push.yml@main
         with:
           name: '${{ github.event.repository.name }}-develop'
           tags: pr-${{ github.event.number }},latest
         secrets: inherit
-      - name: build-main-open:
+      - name: build-main-open
         if: (github.base_ref == 'main' || github.base_ref == 'master') && github.event.pull_request.merged == false
         uses: kbase/.github/.github/workflows/reusable_build-push.yml@main
         with:
           name: '${{ github.event.repository.name }}'
           tags: pr-${{ github.event.number }}
         secrets: inherit
-      - name: build-main-merge:
+      - name: build-main-merge
         if: (github.base_ref == 'main' || github.base_ref == 'master') && github.event.pull_request.merged == true
         uses: kbase/.github/.github/workflows/reusable_build-push.yml@main
         with:
