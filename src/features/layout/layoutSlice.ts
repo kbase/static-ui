@@ -4,7 +4,7 @@ import { useAppDispatch } from '../../common/hooks';
 
 interface PageState {
   pageTitle: string;
-  environment: 'unknown' | 'production' | 'ci' | 'appdev' | 'ci-europa';
+  environment: 'unknown' | 'production' | 'ci' | 'appdev' | 'narrative-dev';
 }
 export const initialState: PageState = {
   pageTitle: document.title || 'KBase',

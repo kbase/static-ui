@@ -103,7 +103,7 @@
   },
   "name": "@jsfillman/ui",
   "private": false,
-  "proxy": "https://ci-europa.kbase.us",
+  "proxy": "https://narrative-dev.kbase.us",
   "remarkConfig": {
     "plugins": {
       "remark-preset-lint-recommended": {
