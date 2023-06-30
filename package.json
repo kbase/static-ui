@@ -101,9 +101,9 @@
       "^d3-(.*)$": "d3-$1/dist/d3-$1"
     }
   },
-  "name": "@jsfillman/ui",
-  "private": false,
-  "proxy": "https://narrative-dev.kbase.us",
+  "name": "ui-refresh-test",
+  "private": true,
+  "proxy": "https://ci-europa.kbase.us",
   "remarkConfig": {
     "plugins": {
       "remark-preset-lint-recommended": {
